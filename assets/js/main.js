@@ -19,3 +19,51 @@ function snack2(){
     console.log(x1);
 }
 document.getElementById('snack2').addEventListener('click',snack2);
+
+// snack3 
+// incomplete
+function snack3(){
+    let x2 = parseInt(prompt("quanti vettori vuoi creare?"));
+    let y;
+    for(i = 0; i < x2; ++i){
+        eval('var ' + 'arrayN' + i + '= ' + '[]' + ';');
+        y = `arrayN${i}[k]`;
+        console.log(y);
+        for(k=0; k < 10; ++k){
+            y.valueOf().push(Math.floor(Math.random() * 999)+1);
+        }
+        alert(arrayN+i);
+    }
+    alert(` la somma é: ${x1}`);
+    console.log(x1);
+}
+document.getElementById('snack3').addEventListener('click',snack3);
+
+// snack4
+function snack4(){
+    let nomiInvitati = ["gianni", "carlo", "silvio", "zlatan", "giulio"];
+    console.log(nomiInvitati);
+    let x4 = prompt('nome invitato');
+    console.log(x4)
+    let z4 = 0;
+    let y4 = nomiInvitati.length;
+    while(z4 < y4){
+
+        if(x4 == nomiInvitati[z4]){
+            alert(`${x4} é invitato alla festa`);
+            console.log(`${x4} é invitato alla festa`);
+            break;
+        }
+        else
+        {
+            z4++
+        }
+
+    }
+    if(z4 === 5){
+        alert(`${x4} non é stato invitato`)
+        console.log(`${x4} non é stato invitato`)
+
+    }
+}
+document.getElementById('snack4').addEventListener('click',snack4);
