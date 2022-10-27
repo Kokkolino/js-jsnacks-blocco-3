@@ -24,14 +24,14 @@ document.getElementById('snack2').addEventListener('click',snack2);
 function snack3(){
     let x2 = parseInt(prompt("quanti vettori vuoi creare?"));
     for(let i = 1; i <= x2; ++i){
-        eval('var ' + 'arrayN'+ i + ' = ' + '['+']'+';');
-        eval('console' + '.' + 'log' + '('+ 'arrayN' + i +')' + ';')
+        eval(`var arrayN${i}=[];`);
+        eval(`console.log(arrayN${i});`);
 
         for(k=0; k < 10; ++k){
             let random = Math.round(Math.random() * 99) + 1;
-            eval('arrayN' + i + '.push' + `(${random});`);
+            eval(`arrayN${i}.push(${random});`);
         }
-        eval('alert(arrayN' + i +');')
+        eval(`alert(arrayN${i});`);
     }
     console.log(x1);
 }
