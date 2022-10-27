@@ -21,20 +21,18 @@ function snack2(){
 document.getElementById('snack2').addEventListener('click',snack2);
 
 // snack3 
-// incomplete
 function snack3(){
     let x2 = parseInt(prompt("quanti vettori vuoi creare?"));
-    let y;
-    for(i = 0; i < x2; ++i){
-        eval('var ' + 'arrayN' + i + '= ' + '[]' + ';');
-        y = `arrayN${i}[k]`;
-        console.log(y);
+    for(let i = 1; i <= x2; ++i){
+        eval('var ' + 'arrayN'+ i + ' = ' + '['+']'+';');
+        eval('console' + '.' + 'log' + '('+ 'arrayN' + i +')' + ';')
+
         for(k=0; k < 10; ++k){
-            y.valueOf().push(Math.floor(Math.random() * 999)+1);
+            let random = Math.round(Math.random() * 99) + 1;
+            eval('arrayN' + i + '.push' + `(${random});`);
         }
-        alert(arrayN+i);
+        eval('alert(arrayN' + i +');')
     }
-    alert(` la somma é: ${x1}`);
     console.log(x1);
 }
 document.getElementById('snack3').addEventListener('click',snack3);
