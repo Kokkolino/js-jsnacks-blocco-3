@@ -1,8 +1,12 @@
 // snack1
 function snack1(){
     let array1 = [];
-    while (array1.length < 50){
-        array1.push(parseInt(prompt("inserisci un numero")));
+    let sum = 0;
+    let x1;
+    while (sum < 50){
+        x = parseInt(prompt("inserisci un numero"));
+        array1.push(x);
+        sum += x;
     }
     alert(`il tuo vettore: ${array1}`);
     console.log(array1);
@@ -33,7 +37,6 @@ function snack3(){
         }
         eval(`alert(arrayN${i});`);
     }
-    console.log(x1);
 }
 document.getElementById('snack3').addEventListener('click',snack3);
 
